@@ -28,3 +28,26 @@ html, body {
 canvas {
     position: absolute;
     top: 0;
+    left: 0;
+    display: block;
+}
+
+.name {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 4vw;
+    text-shadow: 0 0 5px #000000;
+    user-select: none;
+    pointer-events: none;
+}
+
+@media all and (min-width: 640px) {
+    .name {
+        font-size: 45px
+    }
+}
