@@ -1,1 +1,28 @@
+<div class="container">
+    <canvas id="canvas"></canvas>
+    <div class="clean-btn">
+        clean the screen
+    </div>
+</div>
 
+<div class="name">
+</div>
+
+<script type="x-shader/x-fragment" id="fragmentShader">
+    #define PI 3.14159265359
+
+    uniform float u_ratio;
+    uniform vec2 u_cursor;
+    uniform float u_stop_time;
+    uniform float u_clean;
+    uniform float u_fade;
+    uniform vec2 u_stop_randomizer;
+
+    uniform sampler2D u_texture;
+    varying vec2 vUv;
+
+    // --------------------------------
+    // 2D noise
+
+    vec3 mod289(vec3 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
+    vec2 mod289(vec2 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
